@@ -2,7 +2,7 @@ pipeline{
     agent any
     
     stages{
-       stage('GetCode'){
+       stage('Pull'){
             steps{
                 script{
                     checkout   ([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/FatmaDaas/ProjectAngular.git']]])
