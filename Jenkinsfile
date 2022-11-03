@@ -6,6 +6,7 @@ pipeline{
             steps{
                 script{
                     checkout   ([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/FatmaDaas/ProjectAngular.git']]])
+                    sh " npm install "
                 }
 
             }
